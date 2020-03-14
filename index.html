@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Интернет-магазин</title>
+  <meta charset="UTF-8">
+  <title>Интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/d026af0d1d.js"></script>
+</head>
+
 </head>
 <body>
-<header>
-    <button class="btn-cart" type="button">Корзина</button>
+<header class="center">
+  <div class="title">
+    <h1>Интернет-магазин</h1>
+    <div class="title__btn">
+      <a href="cart.html">
+        <img alt="cart" class="title__cart btn-cart" src="img/cart_black.svg">
+      </a>
+    </div>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Каталог</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
+      <li class="menu__item btn-cart"><a href="#" class="menu__link">Корзина</a></li>
+    </ul>
+  </nav>
 </header>
-<main>
-    <div class="products"></div>
+<main class="center">
+  <div class="products"></div>
 </main>
 <script src="./js/main.js"></script>
 </body>

@@ -1,0 +1,116 @@
+@import "vars"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-size: 15px
+
+body
+  font-family: sans-serif
+  background-color: #fff
+
+a
+  text-decoration: none
+  outline: none
+  transition: all .3s
+
+.center
+  padding: 0 calc(50vw - 500px)
+.title
+  padding-top: 1rem
+  padding-bottom: 1rem
+  background-color: $color_light1
+  display: flex
+  justify-content: space-between
+  align-items: center
+  & h1
+    margin: 1rem 2rem
+  &__btn
+    height: 60px
+    width: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 2rem
+    cursor: pointer
+    border-radius: 50%
+    &:hover
+      background-color: #fccee1
+      box-shadow: 0 3px 16px 0 rgba(0,0,0,0.2), 0 6px 6px 0 rgba(0,0,0,0.19)
+      & .title__cart
+        transform: scale(1.15)
+  &__cart
+    height: 29px
+    width: 32px
+    padding-top: 5px
+    padding-right: 2px
+
+
+.menu
+  height: 50px
+  list-style-type: none
+  display: flex
+  justify-content: center
+  background-color: $color_mid
+  &__link
+    height: 40px
+    font-weight: bold
+    color: $color_bg
+    text-transform: uppercase
+    display: block
+    padding: 20px
+    &:hover
+      color: $color_light2
+      border-bottom: 2px solid $color_light2
+
+.products
+  display: grid
+  grid-template-columns:  repeat(4, 1fr)
+  padding: 4rem 0 4rem 0
+  gap: 1rem
+
+  .product
+    min-height: 100px
+    flex-basis: 200px
+    padding: 1rem
+    display: flex
+    flex-direction: column
+    transition: all .5s
+    & img
+      width: 100%
+    & h3
+      padding: 1rem 0
+      font-size: 1.5rem
+    & p
+      font-size: 1rem
+      color: $color_mid
+      font-weight: bold
+      padding: 0 0 1rem
+    &__atc
+      align-self: center
+      width: 100%
+      margin: 1rem 0
+      padding: .5rem
+      background: $color_dark
+      border: 2px solid $color_dark
+      color: $color_bg
+      transition: all .5s
+      cursor: pointer
+      &:hover
+        background: $color_bg
+        color: $color_dark
+        font-weight: bold
+
+    &:hover
+      box-shadow: 0 5px 8px 0 rgba(67, 60, 94, 0.16)
+      transform: scale(1.1)
+      background: $color_bg
+
+
+
+
+
+
