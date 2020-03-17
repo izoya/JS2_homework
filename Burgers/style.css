@@ -1,0 +1,54 @@
+body {
+  background: url("https://images.chefmarket.ru/files/product_description/image1/c5db6d30148cca47a4de1d4c872a5236.jpg");
+  background-attachment: fixed;
+  backdrop-filter: brightness(.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+label {
+  display: inline;
+}
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form_box {
+  opacity: .8;
+  padding: 1.2rem;
+  background: white;
+  font-size: 1.1rem;
+}
+.form_box form {
+  display: flex;
+  flex-direction: column;
+}
+.form_box button  {
+  align-self: flex-end;
+  margin-right: 1.6rem;
+  margin-bottom: .5rem;
+
+  width: 10rem;
+  z-index: 2;
+}
+
+
+
+.label {
+  width: 120px;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+}
+.total div {
+  padding: 0 1.5rem 0 1rem;
+}

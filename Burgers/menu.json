@@ -1,0 +1,52 @@
+{
+  "size": [
+    {
+      "id": "sm",
+      "price": 50,
+      "calorie": 20,
+      "text": "Small (50 RUB, 20 kcal)"
+    },
+    {
+      "id": "lg",
+      "price": 100,
+      "calorie": 40,
+      "text": "Large (100 RUB, 40 kcal)"
+    }
+  ],
+  "stuffing": [
+    {
+      "id": "1",
+      "price": 10,
+      "calorie": 20,
+      "text": "Cheese (+10 RUB, +20 kcal)"
+    },
+    {
+      "id": "2",
+      "price": 20,
+      "calorie": 5,
+      "text": "Lettuce (+20 RUB, +5 kcal)"
+    },
+    {
+      "id": "3",
+      "price": 15,
+      "calorie": 10,
+      "text": "Potato (+15 RUB, +10 kcal)"
+    }
+  ],
+  "topping": [
+    {
+      "id": "1",
+      "price": 15,
+      "calorie": 0,
+      "text": "Seasoning (+15 RUB, +0 kcal)"
+    },
+    {
+      "id": "2",
+      "price": 20,
+      "calorie": 5,
+      "text": "Mayonnaise (+20 RUB, +5 kcal)"
+    }
+  ]
+}
+
+

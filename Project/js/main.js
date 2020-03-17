@@ -24,6 +24,18 @@ class ProductList {
             block.insertAdjacentHTML('beforeend', productObject.render());
         }
     }
+
+    /**
+     * Метод возвращает сумму всех товаров.
+     * @returns {number} sum
+     */
+    sum() {
+        let sum = 0;
+        for (let item of this.goods) {
+            sum += item.price;
+        }
+        return sum;
+    }
 }
 
 class ProductItem {
@@ -47,5 +59,42 @@ class ProductItem {
     }
 }
 
-new ProductList();
+const products = new ProductList();
+console.log("Сумма всех товаров " + products.sum());
+
+
+
+class Cart {
+    constructor() {
+        this.goodsInCart = [];
+    }
+
+    add(item) {
+
+    }
+
+    remove(item) {
+
+    }
+
+    _render() {
+
+    }
+}
+
+class CartItem {
+    constructor(item, qty = 1) {
+        this.qty = qty;
+    }
+
+    _render() {
+
+    }
+
+    // Или increase/decrease
+    changeQty() {
+
+    }
+}
+
 
