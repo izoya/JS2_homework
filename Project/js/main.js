@@ -1,6 +1,7 @@
 const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 // Переделать в ДЗ
+
 // let getRequest = (url) => {
 //     return new Promise ((resolve, reject) => {
 //
@@ -21,6 +22,7 @@ const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 // getRequest(API).then(data => console.dir(data)).catch(error => console.log(error + ' Error'));
 
 
+
 class ProductList {
     constructor(container = '.products') {
         this.container = container;
@@ -31,8 +33,10 @@ class ProductList {
             .then((data) => {
                 this.goods = [...data];
                 this.render();
+
             })
             .then(() => this._addHandlers());
+
     }
 
     // _fetchProducts() {
@@ -62,6 +66,7 @@ class ProductList {
     }
 
     calcSum(){
+
         return this.allProducts.reduce((total, item) => total += item.price, 0);
     }
 
@@ -72,6 +77,7 @@ class ProductList {
                 cart.add(button.parentNode.dataset.id);
             });
         });
+
     }
 }
 
@@ -97,7 +103,9 @@ class ProductItem {
 }
 
 const products = new ProductList();
+
 setTimeout(() => console.log("Сумма всех товаров " + products.calcSum()), 1000);
+
 
 
 
