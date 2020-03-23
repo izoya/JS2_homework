@@ -29,6 +29,7 @@ a
   & h1
     margin: 1rem 2rem
   &__btn
+    position: relative
     height: 60px
     width: 60px
     display: flex
@@ -42,6 +43,9 @@ a
       box-shadow: 0 3px 16px 0 rgba(0,0,0,0.2), 0 6px 6px 0 rgba(0,0,0,0.19)
       & .title__cart
         transform: scale(1.15)
+      & .cart_dropdown
+        visibility: initial
+        opacity: 0.8
   &__cart
     height: 29px
     width: 32px
@@ -109,8 +113,26 @@ a
       transform: scale(1.1)
       background: $color_bg
 
-
-
+.cart_dropdown
+  visibility: hidden
+  display: flex
+  width: 300px
+  min-height: 100px
+  flex-direction: column
+  position: absolute
+  top: 65px
+  right: -1rem
+  padding: 1rem
+  border-radius: .3rem
+  transition: all .5s
+  opacity: 0
+  background: #fff
+  box-shadow: 0 5px 8px 0 rgba(67, 60, 94, 0.16)
+.cart__item
+  display: flex
+  justify-content: space-between
+  & i
+    cursor: pointer
 
 
 
