@@ -7,11 +7,9 @@
 
 html
   font-size: 15px
-
 body
   font-family: sans-serif
-  background-color: #fff
-
+  color: #2b2b2b
 a
   text-decoration: none
   outline: none
@@ -19,6 +17,16 @@ a
 
 .center
   padding: 0 calc(50vw - 500px)
+
+
+header
+  background-color: $color_light1
+
+
+
+
+button:focus
+  outline: none
 .title
   padding-top: 1rem
   padding-bottom: 1rem
@@ -26,28 +34,10 @@ a
   display: flex
   justify-content: space-between
   align-items: center
-  & h1
-    margin: 1rem 2rem
-  &__btn
-    height: 60px
-    width: 60px
-    display: flex
-    justify-content: center
-    align-items: center
-    margin-right: 2rem
-    cursor: pointer
-    border-radius: 50%
-    &:hover
-      background-color: #fccee1
-      box-shadow: 0 3px 16px 0 rgba(0,0,0,0.2), 0 6px 6px 0 rgba(0,0,0,0.19)
-      & .title__cart
-        transform: scale(1.15)
-  &__cart
-    height: 29px
-    width: 32px
-    padding-top: 5px
-    padding-right: 2px
-
+.logo
+  margin: 1rem 2rem
+  font-size: 2rem
+  font-weight: bold
 
 .menu
   height: 50px
@@ -66,51 +56,166 @@ a
       color: $color_light2
       border-bottom: 2px solid $color_light2
 
+
+.btn-cart
+  background-color: #fafafa
+  padding: 10px 20px
+  border: 1px solid transparent
+  color: #2f2a2d
+  border-radius: 5px
+  transition: all ease-in-out .4s
+  cursor: pointer
+  margin-top: 10px
+
+.img_cart
+  height: 29px
+  width: 32px
+  padding-top: 5px
+  padding-right: 2px
+
+.btn-cart:hover
+  background-color: transparent
+  border-color: #fafafa
+  color: #fafafa
+
+.btn-cart, .logo
+  align-self: center
+
+
 .products
+  column-gap: 30px
   display: grid
-  grid-template-columns:  repeat(4, 1fr)
-  padding: 4rem 0 4rem 0
-  gap: 1rem
+  grid-template-columns: repeat(auto-fit, 200px)
+  grid-template-rows: 1fr
+  padding: 40px 80px
+  justify-content: space-between
 
-  .product
-    min-height: 100px
-    flex-basis: 200px
-    padding: 1rem
-    display: flex
-    flex-direction: column
-    transition: all .5s
-    & img
-      width: 100%
-    & h3
-      padding: 1rem 0
-      font-size: 1.5rem
-    & p
-      font-size: 1rem
-      color: $color_mid
-      font-weight: bold
-      padding: 0 0 1rem
-    &__atc
-      align-self: center
-      width: 100%
-      margin: 1rem 0
-      padding: .5rem
-      background: $color_dark
-      border: 2px solid $color_dark
-      color: $color_bg
-      transition: all .5s
-      cursor: pointer
-      &:hover
-        background: $color_bg
-        color: $color_dark
-        font-weight: bold
+p 
+  margin: 0 0 5px 0
 
-    &:hover
-      box-shadow: 0 5px 8px 0 rgba(67, 60, 94, 0.16)
-      transform: scale(1.1)
-      background: $color_bg
+.product-item
+  display: flex
+  flex-direction: column
+  width: 200px
+  border-radius: 5px
+  overflow: hidden
+  margin: 20px 0
 
+img 
+  max-width: 100%
+  height: auto
+
+.desc 
+  border: 1px solid #c0c0c040
+  padding: 15px
+
+.cart
+  position: relative
+  margin-right: 2rem
+
+.cart-block
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.62)
+  border-radius: 5px
+  box-sizing: border-box
+  right: 0
+  top: 95%
+  position: absolute
+  background-color: white
+  padding: 20px
+  color: black
+  width: 300px
 
 
+.invisible
+  display: none
+
+.cart-block:before
+  content: ''
+  width: 0
+  height: 0
+  position: absolute
+  top: -10px
+  right: 35px
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  border-bottom: 10px solid white
 
 
+.buy-btn
+  margin-top: 5px
+  background-color: #2f2a2d
+  padding: 5px 15px
+  border: 1px solid transparent
+  color: #fafafa
+  border-radius: 5px
+  transition: all ease-in-out .4s
+  cursor: pointer
+
+.del-btn
+  cursor: pointer
+  font-size: 1.2rem
+  &:hover
+    outline: none
+    color: #2f2a2d
+
+.buy-btn:hover
+  background-color: #fafafa
+  color: #4a4247
+  border: 1px solid #2f2a2d
+
+.cart-item 
+  display: flex
+  justify-content: space-between
+
+.cart-item:not(:last-child)
+  margin-bottom: 20px
+
+.product-bio
+  display: flex
+
+.cart-item img
+  align-self: flex-start
+  margin-right: 15px
+
+.product-single-price
+  color: #474747
+  font-size: 0.5em
+
+.product-price
+  margin-left: 30px
+
+.product-desc
+  max-width: 150px
+
+.product-quantity 
+  margin-top: 15px
+  font-size: 0.75em
+
+.right-block
+  text-align: right
+
+.btn-search 
+  background-color: transparent
+  border: none
+  font-size: 1.2em
+  position: absolute
+  bottom: 17px
+  right: 0
+
+.search-form
+  position: relative
+  margin-right: 50px
+  display: inline-block
+
+.search-field:focus
+  outline: none
+
+.search-field 
+  box-sizing: border-box
+  width: 200px
+  padding: 10px
+  background-color: transparent
+  border: none
+  border-bottom: 2px solid #2b2b2b
+  margin: 12px 0
 
