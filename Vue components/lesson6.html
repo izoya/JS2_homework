@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 6 - Vue Components</title>
+
+</head>
+<body>
+<div id="app">
+	<div>
+		<button v-for="tab of tabs" :key="tab" @click="currentTab = tab"> {{ tab }}</button>
+		<component :is="currentComponent"></component>
+	</div>
+	<some-el @increase="increase()" :title="someString" :counter="counter">
+		<div v-if="switcher">Injected div</div>
+	</some-el>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script src="components.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
