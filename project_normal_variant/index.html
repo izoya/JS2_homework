@@ -11,23 +11,21 @@
     <header>
         <div class="logo">Интернет-магазин</div>
         <div class="cart">
-            <form action="#" class="search-form" @submit.prevent="filter">
-                <input type="text" class="search-field" v-model="userSearch">
-                <button class="btn-search" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
+            <search ref="search"></search>
             <cart ref="cart"></cart>
         </div>
     </header>
     <main>
+        <err ref="error" v-if="loadError"></err>
         <products ref="products"></products>
     </main>
 </div>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/CartComp.js"></script>
+    <script src="js/SearchComp.js"></script>
     <script src="js/ProductComp.js"></script>
+    <script src="js/ErrorComp.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

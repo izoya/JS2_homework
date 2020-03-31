@@ -164,3 +164,8 @@ img {
     border: none;
     border-bottom: 2px solid #fafafa;
 }
+.error {
+    color: red;
+    background: lightgrey;
+    padding: 15px;
+}

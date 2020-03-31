@@ -24,6 +24,8 @@ Vue.component('products', {
     },
     template: `
         <div class="products">
+            <p v-if="$root.$refs.search.searchText && !$root.$refs.search.filtered.length">
+            По вашему запросу ничего не найдено</p>
             <product ref="refref" v-for="item of filtered" :key="item.id_product" :img="imgCatalog" :product="item"></product>
         </div>
     `
@@ -42,7 +44,7 @@ Vue.component('product', {
     },
 
     template: `
-    <div class="product-item">
+    <div class="product-item" :data-id="product.id_product">
                 <img :src="img" alt="Some img">
                 <div class="desc">
                     <h3>{{product.product_name}}</h3>
