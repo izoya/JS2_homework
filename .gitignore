@@ -2,7 +2,8 @@
 tmp/*
 .idea/*
 *tmp*
-node_modules/*
-
+*/node_modules/*
+*node_modules*
+ /project_express/node_modules/*
 
 
